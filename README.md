@@ -311,6 +311,6 @@ SÁNG (khi có cảm hứng)        TỐI (khi cần bài)
 
 ---
 
-**Made with ❤️ by [Thông Phan](https://thongphan.com) × [Conan School](https://conanschool.com)**
+**Made with ❤️ by [Thông Phan](https://thongphan.com) × [Conan School](https://conan.school)**
 
-**Hỗ trợ:** Liên hệ qua [Facebook Thông Phan](https://facebook.com/thongphan.page) hoặc nhóm Conan School
+**Hỗ trợ:** Liên hệ qua [Facebook Thông Phan](https://fb.com/thongphan.88) hoặc nhóm [Conan School](https://conan.school)
