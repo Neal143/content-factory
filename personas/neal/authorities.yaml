@@ -1,0 +1,31 @@
+# Persona Pack Template — Authority Library
+# Version: v18.0
+
+# Expert registry — thêm experts phù hợp với niche của bạn
+experts:
+  - name: "Rudolf Steiner"
+    field: "Giáo dục / Triết học"
+    credentials: "Triết gia, nhà giáo dục người Áo — sáng lập phương pháp Waldorf"
+    cascade: "nổi tiếng với quan điểm phát triển trẻ theo 7 năm đầu đời, đề cao trí tưởng tượng, nghệ thuật và kể chuyện"
+    topics: ["Giáo dục sớm", "Nuôi dạy con", "Phát triển toàn diện"]
+    used_count: 0
+  - name: "Daniel J. Siegel"
+    field: "Tâm lý học / Nuôi dạy con"
+    credentials: "Bác sĩ thần kinh học, giáo sư ĐH UCLA"
+    cascade: "tác giả 'Whole-Brain Child', chuyên giải thích khoa học về cách trải nghiệm sớm định hình cấu trúc não bộ"
+    topics: ["Khoa học thần kinh trẻ em", "Tâm lý học", "Gắn kết"]
+    used_count: 0
+  - name: "Yuval Noah Harari"
+    field: "Lịch sử / Tương lai học"
+    credentials: "Nhà sử học, tác giả Sapiens và 21 Lessons for the 21st Century"
+    cascade: "người chỉ ra tương lai con người trong kỷ nguyên AI và những năng lực nào sẽ còn giá trị"
+    topics: ["Kỷ nguyên AI", "Tương lai con người", "Thích nghi"]
+    used_count: 0
+
+citation_patterns:
+  - "full_intro_cascade"     # Tên + credentials + cascade
+  - "soft_name_drop"         # "Có ông giáo sư..."
+  - "achievement_first"      # Achievement trước, tên sau
+  - "story_based"            # "Tui nhớ có đọc bài..."
+
+diversity_rule: "Không dùng cùng 1 expert quá 2 lần trong 5 bài liên tiếp"

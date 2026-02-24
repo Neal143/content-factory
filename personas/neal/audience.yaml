@@ -1,0 +1,27 @@
+# Persona Pack Template — Target Audience
+# Version: v18.0
+
+demographics:
+  age_range: "Có con 0-7 tuổi"              # "25-45"
+  gender: "balanced"                 # "70% male, 30% female" hoặc "balanced"
+  location: ""               # "Vietnam urban" hoặc "Global"
+  income: ""                 # "10-50 triệu/tháng"
+  education: "Có học thức, quan tâm đến giáo dục"              # "University degree+"
+  occupation: ["Các ông bố, bà mẹ"]             # ["Nhân viên văn phòng", "Freelancer"]
+
+psychographics:
+  ambition: "Muốn con có cuộc đời hạnh phúc, ý nghĩa. Khao khát trở thành cha mẹ đủ tốt, không cần hoàn hảo nhưng đi đúng hướng trong giai đoạn vàng của con."               # Mục tiêu lớn nhất
+  fear: "Sợ lãng phí giai đoạn quan trọng nhất của con. Sợ màn hình/MXH/áp lực học làm hại con, AI thay thế con tương lai, và bản thân quá bận rộn/mệt mỏi để hiện diện cùng con."                   # Nỗi sợ lớn nhất
+  frustration: ""            # Điều frustrate nhất
+  consumption: ""            # Cách tiêu thụ content
+
+engagement_patterns:
+  format: ""                 # "Long-form posts (1200-1500 words)"
+  platform: "Facebook cá nhân, Group cộng đồng"               # "Facebook" | "LinkedIn" | "Blog"
+  reading_time: ""           # "5-7 minutes"
+  peak_hours: ""             # "7-9 AM, 9-11 PM"
+
+trigger_words:
+  pain: []                   # Từ kích hoạt nỗi đau
+  desire: []                 # Từ kích hoạt khát vọng
+  curiosity: []              # Từ kích hoạt tò mò

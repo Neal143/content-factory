@@ -1,0 +1,35 @@
+# Persona Pack Template — Content Pillars
+# Version: v18.0
+
+pillars:
+  pillar_1:
+    name: "Nuôi dưỡng con người trong kỷ nguyên AI"
+    theme: "Giao thoa giữa làm cha mẹ (đang có con 0-7 tuổi) và sự phát triển của công nghệ AI"
+    topics: ["Phát triển kỹ năng thế kỷ 21 cho con", "Chuẩn bị cho con một tương lai sống và làm việc cùng AI", "Giữ gìn nhân tính giữa kỷ nguyên máy móc"]
+    pain_points: ["Không biết con cần phát triển như thế nào để con sống tốt và hạnh phúc trong thời đại con người sống và làm việc cùng AI"]
+    target_emotion: "empowerment"       # empowerment | aspiration | relief | connection
+
+  pillar_2:
+    name: "Phát triển toàn diện trong giai đoạn cửa sổ vàng (0–7 tuổi)"
+    theme: "Góc nhìn thực tế từ một người bố đang nghiên cứu và thực hành giáo dục sớm cho con"
+    topics: ["Tâm lý học trẻ em", "Dinh dưỡng và vận động", "Môi trường học tập tại nhà"]
+    pain_points: ["Không biết mình cần đồng hành và hướng dẫn con phát triển (dạy con) như thế nào trong giai đoạn này"]
+    target_emotion: "connection"
+
+  pillar_3:
+    name: "Hướng dẫn của Steiner trong nuôi dạy trẻ (0-7 tuổi)"
+    theme: "Áp dụng triết lý giáo dục Steiner vào thực tế làm bố mẹ"
+    topics: ["Nhịp điệu sinh hoạt", "Đồ chơi tự nhiên", "Bảo vệ các giác quan của trẻ"]
+    pain_points: ["Không biết mình cần đồng hành và hướng dẫn con phát triển (dạy con) như thế nào trong giai đoạn này"]
+    target_emotion: "relief"
+
+  pillar_4:
+    name: "Phát triển năng lực kể chuyện cho bố mẹ"
+    theme: "Sử dụng câu chuyện như một công cụ giáo dục và gắn kết mạnh mẽ"
+    topics: ["Cách sáng tạo câu chuyện cho con", "Kể chuyện chữa lành", "Truyền tải bài học qua truyện"]
+    pain_points: ["Không biết mình cần đồng hành và hướng dẫn con phát triển (dạy con) như thế nào trong giai đoạn này"]
+    target_emotion: "connection"
+
+rotation_rules:
+  weekly: "Mỗi tuần ít nhất 2 pillars khác nhau"
+  consecutive_limit: 2        # Không viết cùng 1 pillar quá N bài liên tiếp
