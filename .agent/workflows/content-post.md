@@ -82,22 +82,12 @@ Trước khi bắt đầu, cần xác định:
 - **Tuân thủ TRIỆT ĐỂ:**
 
 **Voice DNA (BẮT BUỘC — AUTO-FAIL):**
-- Dùng "tui" (không tôi)
-- Dùng "anh em" (không các bạn)
-- Dùng "ổng/bả" sau khi đề cập tên
-- 5-7 fillers: nha, há há, khẹc khẹc, đúng không
-- 6-10 parentheticals (...)
+- Đọc file `personas/[TÊN_USER]/voice-dna.yaml` của user và áp dụng tuyệt đối các đại từ nhân xưng (self, audience, expert), từ đệm (fillers), sắc thái giọng điệu (tone).
+- Không tự ý mặc định xưng "tui/anh em" trừ khi file cấu hình user yêu cầu thế.
 
-**TUYỆT ĐỐI KHÔNG ĐƯỢC — AUTO-FAIL:**
-- ❌ Dấu "-" làm connector
-- ❌ Câu hỏi thật ("Nghe quen không?") → dùng "Anh em biết mà."
-- ❌ Staccato: "Sáng mở mắt. Cả ngày chạy." → dùng narrative
-- ❌ Micro-Staccato: "12k shares. Đổi đời luôn." → merge thành 1 câu dài
-- ❌ Anaphora: "Không X. Không Y. Không Z." → viết liền mạch
-- ❌ Cấu trúc lặp: "X là Y. X là Z."
-- ❌ Tiếng Anh đan xen không ngoặc (proper nouns OK, còn lại PHẢI trong ngoặc đơn)
-- ❌ Dấu "—" em dash làm connector
-- ❌ Câu cụt lủn (1-2 từ + dấu ?/!): "Thu nhập?", "Sao vậy?"
+**ANTI-AI PATTERNS — AUTO-FAIL:**
+- Đọc tham chiếu trực tiếp danh sách 10 pattern cần tránh tại `standards/anti-ai-patterns.md`.
+- Tuyệt đối nghiêm cấm: Dấu "-" làm connector, cấu trúc lặp liên tục, câu ngắn lắt nhắt (Staccato), tiếng Anh đan xen bừa bãi.
 
 **BẮT BUỘC CÓ:**
 - ✅ 1-2 Killer Statements: Câu khẳng định uy lực ở cao trào.
