@@ -10,7 +10,7 @@
 
 # Vault connection
 vault:
-  path: "{{VAULT_PATH}}"    # ← THAY ĐƯỜNG DẪN VAULT CỦA BẠN VÀO ĐÂY
+  path: "d:\\AI\\Content Factory 2026\\ObsidianVault"
   
   # Folders to scan for knowledge injection
   scan_folders:
@@ -61,7 +61,7 @@ vault:
       scan_mode: "direct"       # Đọc trực tiếp, không cần extract
       
     tier_2_viral_posts:
-      path: "Thông Phan/Viral Posts"
+      path: "Neal/Viral Posts"
       priority: 2
       description: "Bài viral (>500 shares) chứa personal anecdotes"
       scan_mode: "extract"      # Cần extract stories từ nội dung bài
@@ -75,7 +75,7 @@ vault:
       verified: true            # Đã public = verified
       
     tier_3_posted:
-      path: "Thông Phan/Posted"
+      path: "Neal/Posted"
       priority: 3
       description: "Bài đã xuất bản, có thể chứa stories chưa extract"
       scan_mode: "extract"
