@@ -1,23 +1,23 @@
 ---
-description: ✍️ Viết bài Thông Phan viral post theo chuẩn v19.0 (Closing Library + VTS + Anti-Staccato v2)
+description: ✍️ Viết bài Universal Viral Post chuẩn v19.0 (Dynamic Persona + Closing Library + VTS)
 ---
 
-# Thông Phan Viral Post Workflow v19.0
+# Universal Viral Post Workflow v19.0
 
-> **Tạo bài viết viral theo chuẩn Thông Phan DNA với Formula 15 Hook**
-> **Source of Truth:** `.agent/agents/orchestrator.agent.md` v3.0.0
+> **Tạo bài viết viral theo chuẩn cấu trúc 7-phase Pipeline, đọc Voice DNA động từ thư mục người dùng.**
+> **Source of Truth:** Lõi Engine tại `engine/pipeline.md`
 
 ---
 
 ## ⚡ SUBCOMMANDS
 
-### `/thongphan-post [topic]` - Bắt đầu mới
+### `/content-post [topic]` - Bắt đầu mới
 1. Đọc User Brief / Research Data.
 2. Kích hoạt Pipeline 7 Phases tuần tự.
 3. POKA-YOKE enforcement tại mỗi phase.
 
-### `/thongphan-post tiếp tục` - Resume từ handoff
-1. Tìm `knowledge/content-factory/production/handoff.yaml` trong workspace.
+### `/content-post tiếp tục` - Resume từ handoff
+1. Tìm `handoff.yaml` trong workspace (tại `production/handoff.yaml` nếu có cấu hình).
 2. Đọc trạng thái (Phase hiện tại, Artifacts đã duyệt).
 3. Tiếp tục ngay từ phase dang dở không hỏi lại user.
 
@@ -39,7 +39,7 @@ Trước khi bắt đầu, cần xác định:
 ### Phase 1: Idea Curation
 // turbo
 - **Agent**: `idea-curator-agent`
-- **Đọc**: `knowledge/content-factory/persona/content-pillars.yaml`
+- **Đọc**: `personas/[TÊN_USER]/pillars.yaml` (hoạt động theo `engine/persona-merge.md`)
 - **Việc làm**: Map topic → content pillar, tìm contrarian angle, xác định transformation promise
 - **POKA-YOKE Gate**: Contrarian angle rõ ràng? Viral potential >= 7?
 - **Output**: `idea-brief`
@@ -47,7 +47,7 @@ Trước khi bắt đầu, cần xác định:
 ### Phase 2: Research & Insight
 // turbo
 - **Agent**: `insight-agent`
-- **Đọc**: `knowledge/content-factory/research/authority-library.md`
+- **Đọc**: `personas/[TÊN_USER]/authorities.yaml`
 - **Việc làm**: Thu thập 2+ studies, 1+ expert, scan vault cho stories, 5+ specific numbers
 - **[SAS v18.2] Story Source Check**:
   - Scan Obsidian vault cho stories liên quan (01-Atomic/Stories/, Viral Posts/, Posted/)
@@ -60,7 +60,7 @@ Trước khi bắt đầu, cần xác định:
 ### Phase 3: Hook Engineering
 // turbo
 - **Agent**: `hook-agent`
-- **Đọc**: `knowledge/content-factory/samples/hook-samples.md`, `production/hook-history.yaml`
+- **Đọc**: `engine/hook-formulas.md`, `production/[user]/hook-history.yaml` (lịch sử user)
 - **Việc làm**: Chọn formula (check rotation), viết 3 versions, score/select
 - **POKA-YOKE Gate**: Score >= 8? Sting Test hit Layer 3? Không trùng 3 bài gần nhất?
 - **Output**: `hook` (2-5 câu)
@@ -100,11 +100,9 @@ Trước khi bắt đầu, cần xác định:
 - ❌ Câu cụt lủn (1-2 từ + dấu ?/!): "Thu nhập?", "Sao vậy?"
 
 **BẮT BUỘC CÓ:**
-- ✅ 1-2 Killer Statements: "Ngày mà anh em [action], là ngày [consequence]"
-- ✅ Authority citation đa dạng (tên chính xác, info phụ mờ)
-- ✅ Proper Noun: giữ nguyên + dịch trong ngoặc
-- ✅ Reader engagement mỗi 2-3 câu
-- ✅ Min 3+ concrete imagery
+- ✅ 1-2 Killer Statements: Câu khẳng định uy lực ở cao trào.
+- ✅ Authority citation đa dạng (tên chính xác, info phụ mờ).
+- ✅ Hình ảnh cụ thể, đánh vào thị giác/cảm xúc (dựa trên `vivid-library.yaml` của user).
 
 **[VTS v19.0] VALUE THREADING — BẮT BUỘC:**
 - ✅ Mỗi 3-5 câu PHẢI có value signal (reader được/tránh gì)
@@ -136,7 +134,8 @@ Trước khi bắt đầu, cần xác định:
 ### Phase 6: Quality Assurance
 // turbo
 - **Agent**: `quality-check-agent`
-- **Rubric** (120 điểm):
+- **Đọc**: `engine/scoring-framework.md` và `personas/[TÊN_USER]/scoring-rules.yaml`
+- **Rubric** (Điểm custom theo user):
   - Voice DNA: 30 pts
   - Anti-AI Patterns: 20 pts
   - Content Quality: 50 pts
@@ -162,7 +161,7 @@ FAIL: "Score < 80 → quay lại Phase 1/2 hoặc escalate"
 
 ```yaml
 # KHÔNG MẶC ĐỊNH. Phải CHỌN 1 trong 6, rotation mỗi 3 bài.
-# Đọc chi tiết: knowledge/content-factory/standards/thong-phan-dna.md > Section 5
+# Lấy tham chiếu nếu persona pack chưa có.
 
 1. Thoải Mái: "Làm hết thì tuyệt, 1-2 cái cũng ok" (bài nhiều steps)
 2. Personal Commitment: "Tui đang đi con đường này" (bài có personal story mạnh)
@@ -179,9 +178,9 @@ FAIL: "Score < 80 → quay lại Phase 1/2 hoặc escalate"
 ## 🔄 MULTI-SESSION (POKA-YOKE)
 
 Khi context đạt 70%, agent tự động:
-1. Ghi `knowledge/content-factory/production/handoff.yaml`
+1. Ghi `production/handoff.yaml`
 2. Lưu checkpoint artifacts
-3. Handoff Message: "Context 70%. Nhập '/thongphan-post tiếp tục' ở phiên mới."
+3. Handoff Message: "Context 70%. Nhập '/content-post tiếp tục' ở phiên mới."
 
 ---
 
