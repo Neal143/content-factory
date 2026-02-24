@@ -9,7 +9,7 @@ Workflow này để Antigravity xử lý các notes pending trong `{{VAULT_PATH}
 > ⚠️ `{{VAULT_PATH}}` = đường dẫn Obsidian vault, cấu hình trong `obsidian-bridge/config.yaml`
 
 ## Khi nào sử dụng
-- Sau khi sync content từ `inb.thongphan.com`
+- Sau khi sync content từ Web Clipper / ứng dụng ghi chú cá nhân (vào thư mục 00-Inbox)
 - User nói: "xử lý inbox", "process inbox", hoặc dùng `/process-inbox`
 
 ## Quy trình xử lý
